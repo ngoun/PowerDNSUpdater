@@ -162,12 +162,16 @@ Right-click the tray icon for:
 
 ## Settings Dialog Buttons
 
-In the settings window, you have four action buttons:
+The settings window has five action buttons organized in two rows:
 
+**Row 1 (Top):**
 - **Save** — save settings and apply them
-- **Save & Update** — save settings and immediately check IP and update DNS
-- **Delete Config** — remove all saved configuration (cannot be undone)
+- **Update** — immediately check IP and update DNS (without saving settings)
 - **Cancel** — close without saving
+
+**Row 2 (Bottom):**
+- **Save & Update** — save settings and immediately check IP and update DNS
+- **Delete Config** — remove all saved configuration (cannot be undone, requires confirmation)
 
 ## Troubleshooting
 

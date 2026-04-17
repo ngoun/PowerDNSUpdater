@@ -47,8 +47,8 @@ class PowerDNSUpdater:
     _restart_loop()          # Stop/start the loop
 
     # UI
-    _show_settings()         # Settings dialog window
-    _action_update_now()     # Force update
+    _show_settings()         # Settings dialog window with form and buttons
+    _action_update_now()     # Force immediate IP check and DNS update
     _action_open_settings()  # Open settings dialog
     _make_icon()             # Generate tray icon image
     _make_menu()             # Create tray menu
@@ -130,6 +130,30 @@ _do_pdns_update_multi(updates={'A': ipv4, 'AAAA': ipv6}):
 ```
 
 **Advantage**: Updates both A and AAAA records in a single API call (atomic operation, one request instead of two).
+
+## Settings Dialog Layout
+
+The settings window (580x520px) contains:
+
+**Header** (red bar with title)
+
+**Buttons** (two rows):
+```
+Row 1: [Save]  [Update]  [Cancel]
+Row 2: [Save & Update]  [Delete Config]
+```
+
+- **Save** — persists all form fields to settings.json and restarts the update loop
+- **Update** — calls `_action_update_now()` without saving (allows testing before saving)
+- **Cancel** — closes dialog without saving
+- **Save & Update** — saves settings and immediately triggers an update, then closes
+- **Delete Config** — removes settings.json after confirmation, resets to defaults
+
+**Form Sections** (scrollable):
+- PowerDNS Connection (API URL, API Key)
+- DNS Record (Zone, Hostname, Record Type, TTL)
+- Options (Check Interval, Enable/Autostart checkboxes)
+- Last Status (read-only, shows last IPs and timestamp)
 
 ## Debugging
 

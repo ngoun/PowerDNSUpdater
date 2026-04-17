@@ -54,7 +54,7 @@ build.bat
    - **TTL:** `3600` (or whatever you prefer)
 4. Check **Enable automatic updates**
 5. Check **Start with Windows** (optional)
-6. Click **Save & Update Now**
+6. Click **Save & Update** to save and test, or click **Update** to test first without saving
 
 ## Step 4: Verify
 
