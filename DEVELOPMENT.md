@@ -234,9 +234,9 @@ pyinstaller --onefile --windowed \
 
 Output: `dist\PowerDNSUpdater.exe`
 
-### Using build.bat
+### Using build-powerdns.bat
 ```bat
-build.bat
+build-powerdns.bat
 ```
 
 ## Extending the App
