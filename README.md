@@ -268,7 +268,7 @@ build.bat
 This:
 1. Installs/updates dependencies
 2. Runs PyInstaller to bundle everything into `dist\PowerDNSUpdater.exe`
-3. Output is a single executable file (~60 MB) with no external dependencies
+3. Output is a single executable file (~18 MB) with no external dependencies
 
 ## License
 
