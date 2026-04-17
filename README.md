@@ -252,7 +252,7 @@ Body:
   }
 ```
 
-Reference: https://doc.powerdns.com/authoritative/http-api/zones.html
+Reference: https://doc.powerdns.com/authoritative/http-api/zone.html
 
 ## Building an Executable
 
